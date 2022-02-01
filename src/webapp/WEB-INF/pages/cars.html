@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<h1>Cars</h1>
+<table border="1">
+    <tr>
+        <th>№</th>
+        <th>model</th>
+        <th>color</th>
+        <th>speed</th>
+    </tr>
+    <tr th:each="car, state: ${cars}">
+        <td th:text="${state.count}">No</td>
+        <td th:text="${car.model}">model</td>
+        <td th:text="${car.color}">color</td>
+        <td th:text="${car.speed}">speed</td>
+    </tr>
+</table>
+</body>
+</html>
